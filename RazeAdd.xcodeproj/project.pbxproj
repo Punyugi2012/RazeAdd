@@ -15,9 +15,9 @@
 		B8086CB42175FEEF004DEB6D /* RectangularPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8086CB22175FEEF004DEB6D /* RectangularPlane.swift */; };
 		B8086CB72175FF96004DEB6D /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8086CB62175FF96004DEB6D /* TargetView.swift */; };
 		B8086CB921760B4E004DEB6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8086CB821760B4E004DEB6D /* Assets.xcassets */; };
-		B834B75E2178A33E0002FA2F /* BillboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834B75D2178A33E0002FA2F /* BillboardView.swift */; };
-		B834B7602178A3570002FA2F /* BillboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834B75F2178A3570002FA2F /* BillboardViewController.swift */; };
-		B834B7622178A3740002FA2F /* BillboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B834B7612178A3740002FA2F /* BillboardViewController.xib */; };
+		B834B7662178A5430002FA2F /* BillboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834B7632178A5430002FA2F /* BillboardViewController.swift */; };
+		B834B7672178A5430002FA2F /* BillboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B834B7642178A5430002FA2F /* BillboardViewController.xib */; };
+		B834B7682178A5430002FA2F /* BillboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834B7652178A5430002FA2F /* BillboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		B8086CB22175FEEF004DEB6D /* RectangularPlane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangularPlane.swift; sourceTree = "<group>"; };
 		B8086CB62175FF96004DEB6D /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
 		B8086CB821760B4E004DEB6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B834B75D2178A33E0002FA2F /* BillboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardView.swift; sourceTree = "<group>"; };
-		B834B75F2178A3570002FA2F /* BillboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardViewController.swift; sourceTree = "<group>"; };
-		B834B7612178A3740002FA2F /* BillboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillboardViewController.xib; sourceTree = "<group>"; };
+		B834B7632178A5430002FA2F /* BillboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillboardViewController.swift; sourceTree = "<group>"; };
+		B834B7642178A5430002FA2F /* BillboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillboardViewController.xib; sourceTree = "<group>"; };
+		B834B7652178A5430002FA2F /* BillboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +81,9 @@
 				B8086CAC2175FEA1004DEB6D /* AdViewController.swift */,
 				B8086C9D2175FE40004DEB6D /* Main.storyboard */,
 				B8086CA22175FE43004DEB6D /* LaunchScreen.storyboard */,
-				B834B75D2178A33E0002FA2F /* BillboardView.swift */,
-				B834B75F2178A3570002FA2F /* BillboardViewController.swift */,
-				B834B7612178A3740002FA2F /* BillboardViewController.xib */,
+				B834B7652178A5430002FA2F /* BillboardView.swift */,
+				B834B7632178A5430002FA2F /* BillboardViewController.swift */,
+				B834B7642178A5430002FA2F /* BillboardViewController.xib */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 			files = (
 				B8086CA42175FE43004DEB6D /* LaunchScreen.storyboard in Resources */,
 				B8086CB921760B4E004DEB6D /* Assets.xcassets in Resources */,
-				B834B7622178A3740002FA2F /* BillboardViewController.xib in Resources */,
+				B834B7672178A5430002FA2F /* BillboardViewController.xib in Resources */,
 				B8086C9F2175FE40004DEB6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,12 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B834B7662178A5430002FA2F /* BillboardViewController.swift in Sources */,
 				B8086C9A2175FE40004DEB6D /* AppDelegate.swift in Sources */,
 				B8086CB42175FEEF004DEB6D /* RectangularPlane.swift in Sources */,
-				B834B75E2178A33E0002FA2F /* BillboardView.swift in Sources */,
 				B8086CAD2175FEA1004DEB6D /* AdViewController.swift in Sources */,
+				B834B7682178A5430002FA2F /* BillboardView.swift in Sources */,
 				B8086CB72175FF96004DEB6D /* TargetView.swift in Sources */,
-				B834B7602178A3570002FA2F /* BillboardViewController.swift in Sources */,
 				B8086CB32175FEEF004DEB6D /* BillboardContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

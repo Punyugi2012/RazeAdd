@@ -79,8 +79,10 @@ extension AdViewController: ARSCNViewDelegate {
         case billboard.billboardAnchor:
             let billboardNode = addBillboardNode()
             node = billboardNode
-            let image = UIImage(named: "logo_1")
-            setBillboardImage(image: image!)
+            let images = [
+                "logo_1", "logo_2", "logo_3", "logo_4", "logo_5"
+                ].map { UIImage(named: $0)! }
+            setBillboardImages(images)
         default:
             break
         }
@@ -166,7 +168,10 @@ private extension AdViewController {
     func createBillboard(topLeft: matrix_float4x4, topRight: matrix_float4x4,
                          bottomRight: matrix_float4x4, bottomLeft: matrix_float4x4) {
         let plane = RectangularPlane(topLeft: topLeft, topRight: topRight, bottomLeft: bottomLeft, bottomRight: bottomRight)
-        let anchor = ARAnchor(transform: plane.center)
+        let rotation = SCNMatrix4MakeRotation(Float.pi / 2.0, 0.0, 0.0, 1.0)
+        let rotatedCenter =
+            plane.center * matrix_float4x4(rotation)
+        let anchor = ARAnchor(transform: rotatedCenter)
         billboard = BillboardContainer(billboardAnchor: anchor, plane: plane)
         sceneView.session.add(anchor: anchor)
         print("New billboard created")
@@ -186,13 +191,15 @@ private extension AdViewController {
         self.billboard?.billboardNode = rectangleNode
         return rectangleNode
     }
-    func setBillboardImage(image: UIImage) {
+    func setBillboardImages(_ images: [UIImage]) {
         let material = SCNMaterial()
         material.isDoubleSided = true
         DispatchQueue.main.async {
-            let imageView = UIImageView(image: image)
-            material.diffuse.contents = imageView
+            let billboardViewController = BillboardViewController(nibName: "BillboardViewController", bundle: nil)
+            billboardViewController.images = images
+            material.diffuse.contents = billboardViewController.view
             self.billboard?.billboardNode?.geometry?.materials = [material]
+            self.billboard?.viewController = billboardViewController
         }
     }
 }
