@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RazeAdd/ui/AdViewController.swift"
-            timestampString = "561465425.277395"
+            timestampString = "561553540.056837"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "touchesBegan(_:with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
