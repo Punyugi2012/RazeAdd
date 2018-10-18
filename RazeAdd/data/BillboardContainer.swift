@@ -32,17 +32,24 @@ import ARKit
 import SceneKit
 
 struct BillboardContainer {
-  var billboardAnchor: ARAnchor
-  var billboardNode: SCNNode?
-  var plane: RectangularPlane
-  var viewController: BillboardViewController?
-
-  var hasBillboardNode: Bool { return billboardNode != nil }
-
-  init(billboardAnchor: ARAnchor, plane: RectangularPlane) {
-    self.billboardAnchor = billboardAnchor
-    self.plane = plane
-    self.billboardNode = nil
-  }
+    var billboardAnchor: ARAnchor
+    var billboardNode: SCNNode?
+    var plane: RectangularPlane
+    var viewController: BillboardViewController?
+    var videoAnchor: ARAnchor?
+    var videoNode: SCNNode?
+    
+    
+    var hasBillboardNode: Bool { return billboardNode != nil }
+    
+    var hasVideoNode: Bool { return self.videoNode != nil }
+    
+    init(billboardAnchor: ARAnchor, plane: RectangularPlane) {
+        self.billboardAnchor = billboardAnchor
+        self.plane = plane
+        self.billboardNode = nil
+        self.videoAnchor = nil
+        self.videoNode = nil
+    }
 }
 
